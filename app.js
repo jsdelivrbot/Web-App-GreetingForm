@@ -1,10 +1,13 @@
 var express = require('express');
 var bodyParser = require("body-parser");
 var exphbs =require ("express-handlebars");
+
 var app = express();
+//body Parser middleware
 app.use(bodyParser.urlencoded({extended:false}));
 
-//var bodyParser = require('body-parser');
+//expose express static folder
+app.use(express.static('public'));
 
 // Register handlebars
 app.engine("handlebars", exphbs({
@@ -14,17 +17,24 @@ app.engine("handlebars", exphbs({
 
 app.set("view engine","handlebars");
 
-//body Parser middleware
 // make Handlebars extention for views
 app.get("/", function (req,res) {
-  res.render("greetings")
+  res.render("greetings");
+
+
 });
+// create an object
 
 
-//display textbox input
-app.post("/" ,function (req,res){
-  res.send(req.body.textbox);
-})
+// //display textbox input
+app.post("/greeted" ,function (req,res){
+
+  var textVal =req.body.textbox;
+
+  res.render("greetings", {
+    textVal: textVal
+  });
+});
 
  var server = app.listen(3000, function () {
  var host = server.address().address;
