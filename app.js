@@ -23,17 +23,31 @@ app.get("/", function (req,res) {
 
 
 });
-// create an object
+//radio buttons reaction
+
 
 
 // //display textbox input
 app.post("/greeted" ,function (req,res){
-
+  var language = req.body.language;
   var textVal =req.body.textbox;
+  var greetedUser = "";
 
+if (language === "isiXhosa") {
+   greetedUser = "Molo " + textVal;
+}
+else if (language === "English") {
+  greetedUser = "Hallo " + textVal;
+}
+else if (language === "Afrikaans") {
+  greetedUser = "Halo " + textVal;
+}
   res.render("greetings", {
-    textVal: textVal
+    textVal: greetedUser
+
   });
+
+
 });
 
  var server = app.listen(3000, function () {
