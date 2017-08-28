@@ -69,7 +69,7 @@ else if (language === "Afrikaans") {
 
 });
 
- var server = app.listen(5000, function () {
- var host = server.address().address;
-var port = server.address().port;
- });
+app.set("port",(process.env.PORT || 5000));
+app.listen(app.get("port"), function() {
+  console.log('node app is running on port', app.get('port'));
+});
