@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node app.js"
   },
   "author": "Thabiso Budaza",
   "license": "ISC",
@@ -12,5 +13,14 @@
     "express-handlebars": "^3.0.0"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thabiso22/Web-App-GreetingForm.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Thabiso22/Web-App-GreetingForm/issues"
+  },
+  "homepage": "https://github.com/Thabiso22/Web-App-GreetingForm#readme",
   "description": ""
 }
