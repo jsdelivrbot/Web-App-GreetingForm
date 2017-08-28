@@ -1,7 +1,7 @@
 {
   "name": "public",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "mocha",
     "start": "node app.js"
