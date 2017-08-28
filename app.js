@@ -23,35 +23,17 @@ app.get("/", function (req,res) {
 });
 
 // //display textbox input
+var greetedUser = "";
 app.post("/greeted" ,function (req,res){
   var language = req.body.language;
   var textVal =req.body.textbox;
-  var greetedUser = "";
 
 
 //////Test counter
 var greeted=[];
-var textVal = req.params.textbox;
 
 greeted.push(textVal);
 
-
-var textVal = req.params.textbox;
-greeted.forEach(function(textVal) {
-if(greeted[textVal] === undefined) {
-  greeted[textVal] = 0;
-}
-  greeted[textVal] = greeted[textVal] + 1;
-});
-console.log(greeted);
-
-
-res.send(req.params.textbox  + " has been greeted " + greeted[textVal] + " time(s)");
-
-
-
-
-//////////////////Test counter
 
 if (language === "isiXhosa") {
    greetedUser = "Molo " + textVal;
