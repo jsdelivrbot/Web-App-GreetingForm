@@ -25,10 +25,15 @@ app.get("/", function (req,res) {
 
 // //display textbox input
 var greetedUser = "";
+
 app.post("/greeted" ,function (req,res){
   var language = req.body.language;
   var textVal =req.body.textbox;
-
+//database
+const Workshop = require("./workshop");
+const workshop = Workshop();
+greeted.find({}, function(err, greeted){
+    res.send(greeted);
 
 //////Test counter
 var greeted=[];
