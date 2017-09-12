@@ -1,8 +1,14 @@
-<center><form action="greeted" method="Post" >
-<input type="text" id ="textbox" placeholder="Type in..." name="textbox"></input><br><br>
-<input type="radio" name="language" value="English">English</input>
-<input type="radio" name="language" value="Afrikaans">Afrikaans</input>
-<input type="radio" name="language" value="isiXhosa"></input>isiXhosa<br><br><br><br>
-<input type="submit" id ="button" value="Greet me" name="button"></input><br><br>
-<div name="display">{{textVal}}</div>
-<form></center>
+<center>
+    <form action="/" method="Post">
+        <input type="text" id="textbox" placeholder="Type in..." name="textbox" required></input><br><br>
+        <input type="radio" name="language" value="English">English</input>
+        <input type="radio" name="language" value="Afrikaans">Afrikaans</input>
+        <input type="radio" name="language" value="isiXhosa"></input>isiXhosa<br><br><br><br>
+        <input type="submit" id="button" value="Greet me" name="button"></input><br><br>
+        <a href="/reset"><button value="reset" type="button">Reset</button> </a>
+    <form>
+      <div name="display">{{textVal}}</div>
+      <div name="display1">{{count}}</div>
+      <div name="display2">{{greets}}</div>
+      <a href="/greeted">Greeted Users</a>
+</center>
