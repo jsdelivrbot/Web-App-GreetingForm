@@ -5,8 +5,12 @@ var exphbs = require("express-handlebars");
 var app = express();
 var data = require("./database");
 var app = express();
-
-
+// var mongoose = require('mongoose');
+// mongoose.connection.on("error", function (err) {
+//   console.log(err);
+// });
+//
+// mongoose.connect(mongoURL,{useMongoClient:true})
 //body Parser middleware////////////
 app.use(bodyParser.urlencoded({
     extended: false

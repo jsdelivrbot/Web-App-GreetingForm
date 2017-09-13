@@ -1,3 +1,13 @@
+
+const mongoURL = process.env.MONGO_DB_URL || "'mongodb://localhost/database'";
+
+mongoose.connect(mongoURL);
+
+
+
+
+
+
 // getting-started.js
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/database',function(err,result){
