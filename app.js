@@ -5,12 +5,7 @@ var exphbs = require("express-handlebars");
 var app = express();
 var data = require("./database");
 var app = express();
-// var mongoose = require('mongoose');
-// mongoose.connection.on("error", function (err) {
-//   console.log(err);
-// });
-//
-// mongoose.connect(mongoURL,{useMongoClient:true})
+
 //body Parser middleware////////////
 app.use(bodyParser.urlencoded({
     extended: false
@@ -154,7 +149,8 @@ app.get("/greeted", function(req, res) {
 
 
 app.set("port", (process.env.PORT || 5000));
+app.set("host", (process.env.HOST || "http://localhost"))
 app.listen(app.get("port"), function(err) {
-    console.log('node app is running on port', app.get('port'));
+    console.log('node app is running on port '+ app.get("host")+":"+app.get('port'));
 
 });

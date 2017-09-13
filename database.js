@@ -1,23 +1,14 @@
+const mongoose = require('mongoose');
+const mongoURL = process.env.MONGO_DB_URL || "mongodb://localhost/database";
 
-const mongoURL = process.env.MONGO_DB_URL || "'mongodb://localhost/database'";
-
-mongoose.connect(mongoURL);
-
-
-
-
-
-
-// getting-started.js
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/database',function(err,result){
+mongoose.connect(mongoURL,function(err, result) {
   if (err) {
     console.log(err);
-  }
-  else {
-    console.log("Connected");
+  }else {
+    console.log("Connected to database.");
   }
 });
+
 
 var UserSchema = mongoose.Schema({
     name: String,
